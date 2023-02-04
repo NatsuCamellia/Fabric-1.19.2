@@ -2,5 +2,11 @@
   "item.tanzanite.raw_tanzanite": "Raw Tanzanite",
   "item.tanzanite.tanzanite": "Tanzanite",
 
+  "block.tanzanite.tanzanite_block": "Tanzanite Block",
+  "block.tanzanite.tanzanite_ore": "Tanzanite Ore",
+  "block.tanzanite.deepslate_tanzanite_ore": "Deepslate Tanzanite Ore",
+  "block.tanzanite.netherrack_tanzanite_ore": "Netherrack Tanzanite Ore",
+  "block.tanzanite.endstone_tanzanite_ore": "Endstone Tanzanite Ore",
+
   "itemGroup.tanzanite.tanzanite": "Tanzanite"
 }
