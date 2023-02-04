@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:block",
+  "pool": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "tanzanite:tanzanite_block"
+        }
+      ]
+    }
+  ]
+}
