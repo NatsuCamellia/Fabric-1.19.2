@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=true": { "model": "tanzanite:block/tanzanite_lamp_on" },
+    "lit=false": { "model": "tanzanite:block/tanzanite_lamp_off" }
+  }
+}
