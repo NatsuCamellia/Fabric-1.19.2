@@ -2,6 +2,8 @@
   "item.tanzanite.raw_tanzanite": "Raw Tanzanite",
   "item.tanzanite.tanzanite": "Tanzanite",
   "item.tanzanite.eight_ball": "Eight Ball",
+  "item.tanzanite.eggplant": "Eggplant",
+  "item.tanzanite.eggplant_seeds": "Eggplant Seeds",
 
   "block.tanzanite.tanzanite_block": "Tanzanite Block",
   "block.tanzanite.tanzanite_ore": "Tanzanite Ore",
@@ -10,6 +12,7 @@
   "block.tanzanite.endstone_tanzanite_ore": "Endstone Tanzanite Ore",
   "block.tanzanite.jumpy_block": "Jumpy Block",
   "block.tanzanite.tanzanite_lamp": "Tanzanite Lamp",
+  "block.tanzanite.eggplant_crop": "Eggplant Crop",
 
   "itemGroup.tanzanite.tanzanite": "Tanzanite"
 }

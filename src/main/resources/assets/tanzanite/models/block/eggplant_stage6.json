@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "tanzanite:block/eggplant_stage6"
+  }
+}
