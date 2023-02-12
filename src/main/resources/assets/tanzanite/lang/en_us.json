@@ -16,5 +16,11 @@
 
   "entity.minecraft.villager.jump_master": "Jump Master",
 
-  "itemGroup.tanzanite.tanzanite": "Tanzanite"
+  "itemGroup.tanzanite.tanzanite": "Tanzanite",
+
+  "key.category.tanzanite.tanzanite": "Tanzanite",
+  "key.tanzanite.drink_water": "Drink Water",
+
+  "message.tanzanite.drank_water": "Drank Water!",
+  "message.tanzanite.no_water": "No Water around!"
 }

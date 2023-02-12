@@ -3,6 +3,7 @@ package net.natsucamellia.tanzanite;
 import net.fabricmc.api.ModInitializer;
 import net.natsucamellia.tanzanite.block.ModBlocks;
 import net.natsucamellia.tanzanite.item.ModItems;
+import net.natsucamellia.tanzanite.networking.ModMessages;
 import net.natsucamellia.tanzanite.painting.ModPaintings;
 import net.natsucamellia.tanzanite.util.ModLootTableModifiers;
 import net.natsucamellia.tanzanite.villager.ModVillagers;
@@ -29,5 +30,8 @@ public class Tanzanite implements ModInitializer {
 		ModOreGeneration.generateOres();
 
 		ModLootTableModifiers.modifyLootTables();
+
+		ModMessages.registerC2SPackets();
+		ModMessages.registerS2CPackets();
 	}
 }
