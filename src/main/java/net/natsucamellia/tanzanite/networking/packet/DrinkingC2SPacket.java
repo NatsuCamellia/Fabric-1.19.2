@@ -13,6 +13,8 @@ import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
+import net.natsucamellia.tanzanite.util.IEntityDataSaver;
+import net.natsucamellia.tanzanite.util.ThirstData;
 
 public class DrinkingC2SPacket {
     private static final String MESSAGE_DRINKING_WATER = "message.tanzanite.drank_water";
@@ -26,15 +28,30 @@ public class DrinkingC2SPacket {
             // Notify Player
             player.sendMessage(Text.translatable(MESSAGE_DRINKING_WATER)
                     .fillStyle(Style.EMPTY.withColor(Formatting.DARK_AQUA)), false);
+
             // Play the drinking sound
             world.playSound(null, player.getBlockPos(), SoundEvents.ENTITY_GENERIC_DRINK, SoundCategory.PLAYERS,
                     0.5f, world.random.nextFloat() * 0.1f + 0.9f);
-            // Output how much thirst player has
+
             // Actually add the water level to the player
+            ThirstData.addThirst(((IEntityDataSaver) player), 1);
+
+            // Outputting the current thirst level of player
+            player.sendMessage(Text.literal("Thirst: " + ((IEntityDataSaver) player).getPersistentData().getInt("thirst"))
+                    .fillStyle(Style.EMPTY.withColor(Formatting.AQUA)), true);
         } else {
             // Notify Player
             player.sendMessage(Text.translatable(MESSAGE_NO_WATER_NEARBY)
                     .fillStyle(Style.EMPTY.withColor(Formatting.RED)), false);
+
+            int thirst = ((IEntityDataSaver) player).getPersistentData().getInt("thirst");
+
+            // Outputting the current thirst level of player
+            player.sendMessage(Text.literal("Thirst: " + thirst)
+                    .fillStyle(Style.EMPTY.withColor(Formatting.AQUA)), true);
+
+            // Sync thirst
+            ThirstData.syncThirst(thirst, player);
         }
 
     }

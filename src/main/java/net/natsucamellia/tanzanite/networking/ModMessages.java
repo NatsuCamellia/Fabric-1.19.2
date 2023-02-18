@@ -1,10 +1,12 @@
 package net.natsucamellia.tanzanite.networking;
 
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.util.Identifier;
 import net.natsucamellia.tanzanite.Tanzanite;
 import net.natsucamellia.tanzanite.networking.packet.DrinkingC2SPacket;
 import net.natsucamellia.tanzanite.networking.packet.ExampleC2SPacket;
+import net.natsucamellia.tanzanite.networking.packet.ThirstSyncDataS2CPacket;
 
 public class ModMessages {
     public static final Identifier DRINKING_ID = new Identifier(Tanzanite.MOD_ID, "drinking");
@@ -17,6 +19,6 @@ public class ModMessages {
     }
 
     public static void registerS2CPackets() {
-
+        ClientPlayNetworking.registerGlobalReceiver(THIRST_SYNC_ID, ThirstSyncDataS2CPacket::receive);
     }
 }

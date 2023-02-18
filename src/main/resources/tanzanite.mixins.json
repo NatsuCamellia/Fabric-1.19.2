@@ -4,6 +4,7 @@
   "package": "net.natsucamellia.tanzanite.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "ModEntityDataSaverMixin"
   ],
   "client": [
     "ExampleMixin"
