@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.natsucamellia.tanzanite.block.ModBlocks;
 import net.natsucamellia.tanzanite.event.PlayerTickHandler;
+import net.natsucamellia.tanzanite.fluid.ModFluids;
 import net.natsucamellia.tanzanite.item.ModItems;
 import net.natsucamellia.tanzanite.networking.ModMessages;
 import net.natsucamellia.tanzanite.painting.ModPaintings;
@@ -35,6 +36,8 @@ public class Tanzanite implements ModInitializer {
 
 		ModMessages.registerC2SPackets();
 		ModMessages.registerS2CPackets();
+
+		ModFluids.register();
 
 		ServerTickEvents.START_SERVER_TICK.register(new PlayerTickHandler());
 	}
